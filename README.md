@@ -2,10 +2,10 @@
 This is an analysis of Video Games Sales Data
 
 Folder Structure:
-Data: Link to Original Data Set
-Munge: Includes documents and infomation regarding initial data transformations completed in HDinsight - includes script used and results
-Reports: Includes Excel and Power BI visualization documents - a dashboard and histogram 
-SRC: Includes documents and infomation regarding data aggregations completed in HDinsight - includes script used and the resulting statistical tables
+- Data: Link to Original Data Set
+- Munge: Includes documents and infomation regarding initial data transformations completed in HDinsight - includes script used and results
+- Reports: Includes Excel and Power BI visualization documents - a dashboard and histogram 
+- SRC: Includes documents and infomation regarding data aggregations completed in HDinsight - includes script used and the resulting statistical tables
 
 Insights Gained: 
 - Sports and Shooter games resulted in similar critic scores
