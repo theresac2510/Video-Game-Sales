@@ -1,0 +1,5 @@
+Aggregations:
+- Created two tables – one for sports genre and one for shooter genre – displaying average critic score
+- Created three statistics tables for global sales: i) one for all games  ii) one for spots games   iii) one for shooter games
+- Created two tables – one for sports genre and one for shooter genre – that included the global sales and the number of games 
+matching that global sales amount
