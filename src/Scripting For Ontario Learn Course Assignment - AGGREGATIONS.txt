@@ -1,0 +1,42 @@
+AGGREGATIONS
+
+SELECT AVG(Critic_Score) AS Sports_Critic_Score
+FROM sales_genre
+WHERE Genre LIKE "%Sports%";
+
+
+SELECT AVG(Critic_Score) AS Shooter_Critic_Score
+FROM sales_genre
+WHERE Genre LIKE "%Shooter%";
+
+
+SELECT AVG(Global_Sales) AS Average_Global_Sales, MIN(Global_Sales) AS Min_Global_Sales, MAX(Global_Sales) AS Max_Global_Sales
+FROM sales_genre;
+
+
+SELECT AVG(Global_Sales) AS Average_Global_Sales, MIN(Global_Sales) AS Min_Global_Sales, MAX(Global_Sales) AS Max_Global_Sales
+FROM sales_genre
+WHERE Genre LIKE "%Sports%";
+
+
+SELECT AVG(Global_Sales) AS Average_Global_Sales, MIN(Global_Sales) AS Min_Global_Sales, MAX(Global_Sales) AS Max_Global_Sales
+FROM sales_genre
+WHERE Genre LIKE "%Shooter%";
+
+
+SELECT Global_Sales, COUNT(Global_Sales) AS count
+FROM sales_genre
+WHERE Genre LIKE "%Sports%"
+GROUP BY Global_Sales
+ORDER BY Global_Sales;
+
+
+SELECT Global_Sales, COUNT(Global_Sales) AS count
+FROM sales_genre
+WHERE Genre LIKE "%Shooter%"
+GROUP BY Global_Sales
+ORDER BY Global_Sales;
+
+
+
+
