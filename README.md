@@ -9,4 +9,4 @@ SRC: Includes documents and infomation regarding data aggregations completed in 
 
 Insights Gained: 
 - Sports and Shooter games resulted in similar critic scores
-- In terms of global sales, sports and shooter video games tend to perform similarly, however only the sports genre achieved extreme success in a few minor case. 4 of the sports video games were able to achieve a global sales value greater than 20 million dollars. No shooter games were able to exceed 20 million in sales. 
+- In terms of global sales, sports and shooter video games tend to perform similarly, however only the sports genre achieved extreme success in a few minor case. 4 of the sports video games were able to achieve a global sales value greater than 20 million copies sold. No shooter games were able to exceed 20 million copies sold. 
