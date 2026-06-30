@@ -1,0 +1,5 @@
+Transformations Performed:
+- Selected only these columns: Genre, Global_Sales, Critic_Score.
+- Rounded the data found in the “Global_Sales” column to whole numbers
+- Filtered the data to only look at those items in the “Critic_Score” column that are greater than 0
+- Ordered the data in the “Critic_Score” column from highest to lowest
