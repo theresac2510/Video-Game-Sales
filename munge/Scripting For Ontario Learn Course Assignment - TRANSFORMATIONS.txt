@@ -1,0 +1,80 @@
+TABLE CREATION IN HDINSIGHT
+
+CREATE EXTERNAL TABLE sales
+
+(
+Name string,
+Platform string,
+Year_of_Relevance string,    
+Genre string,
+Publisher string,
+NA_Sales decimal(10,2),           
+EU_Sales decimal(10,2),            
+JP_Sales decimal(10,2),   
+Other_Sales decimal(10,2),
+Global_Sales decimal(10,2),
+Critic_Score int,
+Critic_Count int,
+User_Score string,                     
+User_Count int, 
+Developer string,
+Rating string
+)
+
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+STORED AS TEXTFILE LOCATION '/VideoGameSalesData'
+TBLPROPERTIES("skip.header.line.count"="1"); 
+
+
+SELECT * FROM sales LIMIT 10;
+
+ - - WHERE #operates on rows
+ - - HAVING  #operates on GROUPS
+ - - "WHERE Age = 27" GOOD FILTER FOR NUMBERS
+
+
+TRANSFORMATIONS
+
+
+CREATE TABLE sales_genre
+(
+Genre string,
+Global_Sales decimal(10,2),
+Critic_Score int
+);
+
+
+INSERT OVERWRITE TABLE sales_genre
+SELECT Genre, Global_Sales, Critic_Score                                    
+FROM sales;
+
+
+SELECT * FROM sales_genre LIMIT 10;
+
+
+INSERT OVERWRITE TABLE sales_genre
+SELECT Genre, ROUND(Global_Sales), Critic_Score
+FROM sales_genre;
+
+
+SELECT * FROM sales_genre LIMIT 10;
+
+
+INSERT OVERWRITE TABLE sales_genre
+SELECT *
+FROM sales_genre
+WHERE Critic_Score > 0;
+
+
+SELECT * FROM sales_genre LIMIT 10;
+
+
+INSERT OVERWRITE TABLE sales_genre
+SELECT *
+FROM sales_genre
+ORDER BY Critic_Score DESC;
+
+
+SELECT * FROM sales_genre LIMIT 10;
+
